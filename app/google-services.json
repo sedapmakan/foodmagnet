@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "214234428768",
+    "firebase_url": "https://foodmagnet-aa787.firebaseio.com",
+    "project_id": "foodmagnet-aa787",
+    "storage_bucket": "foodmagnet-aa787.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214234428768:android:85d77a2829951b37",
+        "android_client_info": {
+          "package_name": "teamkeropok.com.foodmagnet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214234428768-aj5psuvrtcptfi8n8un3vpv3co8q2h8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCspHgSH5ity2wso4rwHSI1GYjpP3N_I0M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
