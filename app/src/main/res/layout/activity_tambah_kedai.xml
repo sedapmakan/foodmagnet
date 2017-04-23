@@ -18,15 +18,6 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="271dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
 
     <EditText
         android:id="@+id/et_nama_kedai"
@@ -72,13 +63,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/et_no_telepon_kedai"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/et_no_telepon_kedai"
         android:layout_below="@+id/et_no_telepon_kedai"
-        android:entries="@array/arr_jenis_makanan"
+        android:entries="@array/JenisMakanan"
         tools:layout_editor_absoluteY="322dp"
-        tools:layout_editor_absoluteX="43dp" />
+        tools:layout_editor_absoluteX="43dp"
+        android:layout_alignStart="@+id/et_no_telepon_kedai" />
 
     <Button
         android:id="@+id/bt_tambah_kedai"
@@ -89,6 +79,6 @@
         tools:layout_editor_absoluteX="72dp"
         android:layout_below="@+id/spinnerJenisMakanan"
         android:layout_centerHorizontal="true" />
-    q
+
 
 </RelativeLayout>

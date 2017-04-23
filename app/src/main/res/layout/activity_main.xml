@@ -6,46 +6,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:weightSum="1">
 
     <!-- our toolbar -->
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <Button
-        android:id="@+id/bttambahkedai"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tambah Kedai" />
 
-    <!-- our tablayout to display tabs
+
     <android.support.design.widget.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+        android:layout_height="wrap_content" />
 
-     View pager to swipe views
     <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"/>
+        android:layout_height="384dp"
+        android:layout_below="@id/tabs"
+        android:layout_weight="1.04" />
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/kedaiRecycleView"/>
-    -->
-
-
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_new_post"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_image_edit"
+        android:visibility="visible"
+        app:elevation="3dp"
+        app:fabSize="mini" />
 
 
 </LinearLayout>

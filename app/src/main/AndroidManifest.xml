@@ -26,11 +26,7 @@
         <activity
             android:name=".AccountSetting"
             android:label="@string/title_activity_account_setting" />
-        <activity
-            android:name=".TambahKedai"
-            android:label="@string/title_activity_tambah_kedai"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ViewKedai"></activity>
+        <activity android:name=".TambahKedai"></activity>
     </application>
 
 </manifest>

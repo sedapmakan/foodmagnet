@@ -116,14 +116,16 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                 });
     }
 
-    private void onAuthSuccess(FirebaseUser user) {
-        String nama_pengguna = usernameFromEmail(user.getEmail());
+    private void onAuthSuccess(FirebaseUser pengguna) {
+        String nama_pengguna = usernameFromEmail(pengguna.getEmail());
         String password = mPasswordField.getText().toString();
 
         // Write new user
-        writeNewUser(user.getUid(), nama_pengguna, password, user.getEmail());
+        writeNewUser(pengguna.getUid(), nama_pengguna, password, pengguna.getEmail());
 
         // Go to MainActivity
+
+
         startActivity(new Intent(SignInActivity.this, MainActivity.class));
         finish();
     }
@@ -157,9 +159,9 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
 
     // [START basic_write]
     private void writeNewUser(String IDpengguna, String nama_pengguna, String password, String email) {
-        Pengguna user = new Pengguna(nama_pengguna, password, email);
+        Pengguna pengguna = new Pengguna(nama_pengguna, password, email);
 
-        mDatabase.child("Pengguna").child(IDpengguna).setValue(user);
+        mDatabase.child("Pengguna").child(IDpengguna).setValue(pengguna);
     }
     // [END basic_write]
 

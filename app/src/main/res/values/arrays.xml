@@ -17,12 +17,11 @@
 -->
 
 
-        <string-array name="arr_jenis_makanan">
-
-            <item>Jenis Makanan</item>
-            <item>Elephants Dream</item>
-            <item>Sintel</item>
-            <item>Tears of Steel</item>
+        <string-array name="JenisMakanan">
+            <item>Western</item>
+            <item>Thai</item>
+            <item>Melayu</item>
+            <item>Indo</item>
         </string-array>
 </resources>
 
