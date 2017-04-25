@@ -8,10 +8,6 @@ public class Pengguna {
 
     public String nama_pengguna;
 
-
-
-
-
     private String password;
     private String email;
 

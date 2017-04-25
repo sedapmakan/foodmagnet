@@ -36,10 +36,14 @@ public class MainActivity extends BaseActivity {
     private ViewPager mViewPager;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
 
         // Create the adapter that will return a fragment for each section
@@ -82,6 +86,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(MainActivity.this, TambahKedai.class));
             }
         });
+
     }
     
 

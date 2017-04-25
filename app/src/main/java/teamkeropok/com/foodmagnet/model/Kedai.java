@@ -13,12 +13,12 @@ import java.util.Map;
 
 public class Kedai {
 
-    private String IDkedai;
-    String nama_owner;
-    private String nama_kedai;
-    private String alamat;
-    private String telefon;
-    private String jenis_makanan;
+    public String IDkedai;
+    public String nama_owner;
+    public String nama_kedai;
+    public String alamat;
+    public String telefon;
+    public String jenis_makanan;
     public int ratingCount = 0;
     public Map<String, Boolean> rating = new HashMap<>();
 
@@ -29,7 +29,7 @@ public class Kedai {
         //default constructor
     }
 
-    public Kedai(String uid, String nama_owner, String nama_kedai, String alamat, String telefon, String jenis_makanan)
+    public Kedai(String IDkedai, String nama_owner, String nama_kedai, String alamat, String telefon, String jenis_makanan)
     {
         this.IDkedai = IDkedai;
         this.nama_owner = nama_owner;
@@ -84,7 +84,7 @@ public class Kedai {
         result.put("alamat", alamat);
         result.put("telefon", telefon);
         result.put("jenis_makanan", jenis_makanan);
-        result.put("ratingCount", rating);
+        result.put("ratingCount", ratingCount);
         result.put("rating", rating);
 
         return result;
