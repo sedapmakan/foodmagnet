@@ -38,7 +38,6 @@ public abstract class ListKedaiFragment extends Fragment{
     private DatabaseReference mDatabase;
 
 
-
     private FirebaseRecyclerAdapter<Kedai, KedaiViewHolder> mAdapter;
     private RecyclerView mRecycler;
     private LinearLayoutManager mManager;

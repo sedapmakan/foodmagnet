@@ -1,5 +1,6 @@
 package teamkeropok.com.foodmagnet;
 
+import android.app.Service;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -10,10 +11,12 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 
 import teamkeropok.com.foodmagnet.R;
@@ -26,7 +29,7 @@ import java.util.Map;
 
 public class TambahKedai extends BaseActivity {
 
-    //we will use these constants later to pass the artist name and id to another activity
+    //we will use these constants later to pass the username name and id to another activity
     private static final String TAG = "TambahKedaiActivity";
     private static final String REQUIRED = "Required";
 
@@ -41,8 +44,11 @@ public class TambahKedai extends BaseActivity {
     private EditText input_alamat_kedai;
     private EditText input_no_kedai;
     private Spinner input_jenis_makanan;
+    private Spinner input_waktu_operasi_buka;
+    private Spinner input_waktu_operasi_tutup;
+    private Spinner input_julat_harga;
     private Button button_tambah_kedai;
-
+    //pending rating bar
 
 
     @Override
@@ -60,6 +66,9 @@ public class TambahKedai extends BaseActivity {
         input_alamat_kedai = (EditText) findViewById(R.id.et_alamat_kedai);
         input_no_kedai = (EditText) findViewById(R.id.et_no_telepon_kedai);
         input_jenis_makanan = (Spinner) findViewById(R.id.spinnerJenisMakanan);
+        input_waktu_operasi_buka = (Spinner) findViewById(R.id.spinnerWaktuBuka);
+        input_waktu_operasi_tutup = (Spinner) findViewById(R.id.spinnerWaktuTutup);
+        input_julat_harga = (Spinner) findViewById(R.id.spinnerJulatHarga);
         button_tambah_kedai = (Button) findViewById(R.id.bt_tambah_kedai);
 
 
@@ -79,6 +88,10 @@ public class TambahKedai extends BaseActivity {
         final String alamat = input_alamat_kedai.getText().toString();
         final String telefon = input_no_kedai.getText().toString();
         final String jenis_makanan = input_jenis_makanan.getSelectedItem().toString();
+        final String waktu_operasi_buka = input_waktu_operasi_buka.getSelectedItem().toString();
+        final String waktu_operasi_tutup = input_waktu_operasi_tutup.getSelectedItem().toString();
+        final String julat_harga = input_julat_harga.getSelectedItem().toString();
+
 
         //check if value is empty
         // Nama is required
@@ -119,8 +132,11 @@ public class TambahKedai extends BaseActivity {
                                     "Error: could not fetch user.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
+
                             // Write new post
-                            addKedai(IDpengguna, pengguna.nama_pengguna, nama_kedai, alamat, telefon, jenis_makanan);
+
+
+                            addKedai(IDpengguna, pengguna.nama_pengguna, nama_kedai, alamat, telefon, jenis_makanan, waktu_operasi_buka, waktu_operasi_tutup, julat_harga);
 
                         }
                         // Finish this Activity, back to the stream
@@ -150,6 +166,9 @@ public class TambahKedai extends BaseActivity {
         input_alamat_kedai.setEnabled(enabled);
         input_no_kedai.setEnabled(enabled);
         input_jenis_makanan.setEnabled(enabled);
+        input_waktu_operasi_buka.setEnabled(enabled);
+        input_waktu_operasi_tutup.setEnabled(enabled);
+        input_julat_harga.setEnabled(enabled);
         if (enabled) {
             button_tambah_kedai.setVisibility(View.VISIBLE);
         } else {
@@ -158,11 +177,11 @@ public class TambahKedai extends BaseActivity {
     }
 
 
-    private void addKedai(String IDkedai, String nama_pengguna, String nama_kedai, String alamat, String telefon, String jenis_makanan) {
-        // Create new kedai at /pengguna-addkedai/$idpengguna/$idkedai and at /addkedai/$postid simultaneously
+    private void addKedai(String IDkedai, String nama_pengguna, String nama_kedai, String alamat, String telefon, String jenis_makanan, String waktu_operasi_buka, String waktu_operasi_tutup, String julat_harga) {
+        // Create new kedai at /pengguna-addkedai/$idpengguna/$idkedai at /addkedai/$postid simultaneously
         String key = mDatabase.child("Kedai").push().getKey();
 
-        Kedai kedai = new Kedai(IDkedai, nama_pengguna, nama_kedai, alamat, telefon, jenis_makanan);
+        Kedai kedai = new Kedai(IDkedai, nama_pengguna, nama_kedai, alamat, telefon, jenis_makanan, waktu_operasi_buka, waktu_operasi_tutup, julat_harga);
         Map<String, Object> postValues = kedai.toMap();
 
         Map<String, Object> childUpdates = new HashMap<>();
@@ -174,3 +193,5 @@ public class TambahKedai extends BaseActivity {
 
     // [END write_fan_out]
 }
+
+

@@ -43,4 +43,16 @@
         android:text="Jenis Makanan"
         android:layout_below="@+id/tv_no_telefon"
         android:layout_alignEnd="@+id/tv_nama_kedai" />
+
+    <TextView
+        android:id="@+id/tv_waktu_operasi_buka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="8am"
+        android:layout_below="@+id/tv_jenis_makanan"
+        android:layout_alignEnd="@+id/tv_nama_kedai" />
+
+
+
 </RelativeLayout>

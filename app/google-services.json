@@ -15,6 +15,38 @@
       },
       "oauth_client": [
         {
+          "client_id": "214234428768-0k651eak3e3vrl4jehm05161dv416d1c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "teamkeropok.com.foodmagnet",
+            "certificate_hash": "2b25ae3dc4c387aea7f2f41142550e67aac09347"
+          }
+        },
+        {
+          "client_id": "214234428768-ouki85sh7tf8b0ndekq1ap9o8mb7bk56.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "teamkeropok.com.foodmagnet",
+            "certificate_hash": "7202d382561e159aa6bb88e57880e40b6f461cfb"
+          }
+        },
+        {
+          "client_id": "214234428768-b30q7ipaq42vgge1qps785ivpqec07m1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "teamkeropok.com.foodmagnet",
+            "certificate_hash": "aceea2defac4fced71baa17b11e39a2067a17baf"
+          }
+        },
+        {
+          "client_id": "214234428768-2lk58a9h25cm6ka40hj4dcokvlii44m7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "teamkeropok.com.foodmagnet",
+            "certificate_hash": "90bc7c7528bf6a7c3c1853d48b6a4173a11db269"
+          }
+        },
+        {
           "client_id": "214234428768-aj5psuvrtcptfi8n8un3vpv3co8q2h8k.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +61,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214234428768-aj5psuvrtcptfi8n8un3vpv3co8q2h8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

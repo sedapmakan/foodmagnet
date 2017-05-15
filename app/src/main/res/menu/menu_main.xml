@@ -15,4 +15,10 @@
         android:visible="true"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/profile_setting"
+        android:title="Account Setting"
+        android:visible="true"
+        app:showAsAction="never" />
+
 </menu>

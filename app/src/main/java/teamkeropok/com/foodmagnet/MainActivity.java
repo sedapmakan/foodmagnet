@@ -44,8 +44,6 @@ public class MainActivity extends BaseActivity {
 
 
 
-
-
         // Create the adapter that will return a fragment for each section
         mPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             private final Fragment[] mFragments = new Fragment[] {

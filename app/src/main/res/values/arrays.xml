@@ -23,5 +23,33 @@
             <item>Melayu</item>
             <item>Indo</item>
         </string-array>
+
+
+
+    <string-array name="BajetMakan">
+        <item>5 &#8212; 10</item>
+        <item>11 &#8212; 15</item>
+        <item>16 &#8212; 20</item>
+        <item>21 &#8212; 25</item>
+        <item>26 &#8212; 30</item>
+        <item>31 &#8212; 35</item>
+        <item>36 &#8212; 40</item>
+    </string-array>
+
+    <string-array name="WaktuOperasi">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
 </resources>
 

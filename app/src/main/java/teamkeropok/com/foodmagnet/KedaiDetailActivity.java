@@ -44,6 +44,8 @@ public class KedaiDetailActivity extends BaseActivity implements View.OnClickLis
     private TextView mNamaKedaiView;
     private TextView mAlamatKedaiView;
     private TextView mJenisMakananView;
+    private TextView mWaktuBukaView;
+    private TextView mWaktuTutupView;
     private EditText mCommentField;
     private Button mCommentButton;
     private RecyclerView mCommentsRecycler;
@@ -69,10 +71,13 @@ public class KedaiDetailActivity extends BaseActivity implements View.OnClickLis
         mNamaKedaiView = (TextView) findViewById(R.id.tv_nama_kedai);
         mAlamatKedaiView = (TextView) findViewById(R.id.tv_alamat_kedai);
         mJenisMakananView = (TextView) findViewById(R.id.tv_jenis_makanan);
+        mWaktuBukaView = (TextView) findViewById(R.id.tv_waktu_operasi_buka);
+        mWaktuTutupView = (TextView) findViewById(R.id.tv_waktu_operasi_tutup);
         mCommentField = (EditText) findViewById(R.id.field_comment_text);
         mCommentButton = (Button) findViewById(R.id.button_post_comment);
         mCommentsRecycler = (RecyclerView) findViewById(R.id.recycler_comments);
 
+        // TODO: Replace star button from home page to this page
         mCommentButton.setOnClickListener(this);
         mCommentsRecycler.setLayoutManager(new LinearLayoutManager(this));
 
@@ -95,6 +100,9 @@ public class KedaiDetailActivity extends BaseActivity implements View.OnClickLis
                 mNamaKedaiView.setText(kedai.nama_kedai);
                 mAlamatKedaiView.setText(kedai.alamat);
                 mJenisMakananView.setText(kedai.jenis_makanan);
+                mWaktuBukaView.setText(kedai.waktu_operasi_buka);
+                mWaktuTutupView.setText(kedai.waktu_operasi_tutup);
+
                 // [END_EXCLUDE]
             }
 

@@ -5,6 +5,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <!-- view adapter for menu utama-->
+
     <TextView
         android:id="@+id/tv_nama_kedai"
         style="@style/TextAppearance.AppCompat.Medium"
@@ -13,7 +16,7 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:textStyle="bold"
-        tools:text="My First Post" />
+        tools:text="Nama Kedai" />
 
 
     <TextView
@@ -21,13 +24,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        tools:text="@string/lorem" />
+        tools:text="Alamat Kedai" />
 
     <TextView
         android:id="@+id/tv_jenis_makanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        tools:text="@string/lorem" />
+        tools:text="Jenis Makanan" />
+
+    <TextView
+        android:id="@+id/tv_waktu_operasi_buka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="8" />
+
+    <TextView
+        android:id="@+id/tv_waktu_operasi_tutup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="12" />
+    
+
+
 
 </LinearLayout>
