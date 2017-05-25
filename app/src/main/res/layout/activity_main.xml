@@ -1,39 +1,81 @@
-<LinearLayout
-    android:id="@+id/main_layout"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:weightSum="1">
+    android:background="@drawable/background2"
+
+    android:fitsSystemWindows="?android:attr/windowFullscreen"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <!-- our toolbar -->
 
-
-
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tabs"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/container"
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabs"
+            android:layout_weight="0.26" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/design_navigation_view"
         android:layout_width="match_parent"
-        android:layout_height="384dp"
-        android:layout_below="@id/tabs"
-        android:layout_weight="1.04" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_new_post"
-        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_image_edit"
-        android:visibility="visible"
-        app:elevation="3dp"
-        app:fabSize="mini" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+
+        android:orientation="horizontal"
+        android:paddingLeft="85dp"
+        android:weightSum="1"
+        tools:clickable="?android:attr/windowTranslucentNavigation">
 
 
-</LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_refresh_kedai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/home"
+            android:visibility="visible"
+            app:elevation="3dp"
+            app:fabSize="mini" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_search_kedai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/search"
+            android:visibility="visible"
+            app:elevation="3dp"
+            app:fabSize="mini" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_new_kedai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/add"
+            android:visibility="visible"
+            app:elevation="3dp"
+            app:fabSize="mini" />
+    </LinearLayout>
+
+</RelativeLayout>
+

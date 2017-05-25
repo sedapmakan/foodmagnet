@@ -11,8 +11,19 @@
     <string name="title_activity_sign_in">Sign In Into Apps</string>
     <string name="sign_up">Sign Up</string>
     <string name="tab_menu_utama">Menu Utama</string>
-    <string name="tab_carian_kedai">Carian Kedai</string>
+    <string name="tab_kedai_sendiri">Kedai Ku</string>
     <string name="tab_promosi_kedai">Promosi Kedai</string>
+
+
+    <string name="str_nama_kedai">Nama Kedai</string>
+    <string name="str_no_telephone">No Telephone</string>
+    <string name="str_jenis_makanan">Jenis Makanan</string>
+    <string name="str_alamat_kedai">Alamat</string>
+    <string name="str_waktubuka_kedai">Waktu Buka</string>
+    <string name="str_waktututup_kedai">Waktu Tutup</string>
+    <string name="str_julat_kedai">Julat Harga</string>
+    <string name="str_gambar_kedai">Gambar Kedai</string>
+    <string name="str_gambar_makanan">Gambar Makanan</string>
 
 
     <string name="hint_user_id">User ID</string>
@@ -31,6 +42,36 @@
     <string name="desc_firebase_lockup">Firebase logo and name</string>
     <string name="auth_failed">Authentication failed</string>
     <string name="tambah_kedai">Tambah Ler Kedai</string>
+
+    <string name="rationale_storage">This sample reads images from your camera to demonstrate uploading.</string>
+    <string name="label_link">Link to Uploaded File</string>
+    <string name="label_download">Download File</string>
+    <string name="take_photo_prompt">Upload a Photo</string>
+    <string name="camera_button_text">Upload</string>
+    <string name="download">Download</string>
+    <string name="log_out">Log out</string>
+    <string name="success">Success</string>
+
+
+    <!-- follow gpsPlant tutorial string-->
+
+    <string name="lblPause">Pause GPS</string>
+    <string name="lblResume">Resume GPS</string>
+    <string name="lblLatitude">Latitude</string>
+    <string name="lblLongitude">Longitude</string>
+    <string name="lblZero">0.0</string>
+    <string name="lblGPSAge">GPS Age</string>
+    <string name="lblOpenExistingImage">Open Existing Image</string>
+    <string name="title_activity_color_capture">ColorCaptureActivity</string>
+    <string name="lblTakePhoto">Take Photo</string>
+    <string name="lblTakeNewPhoto">Take New Photo</string>
+    <string name="downladingPlantNames">Downloading Plant Names</string>
+    <string name="lblCancel">Cancel</string>
+    <string name="unableToSaveKedai">Unable to save kedai</string>
+    <string name="lblSearchTerm">Enter Search Term</string>
+    <string name="lblSearch">Search</string>
+    <string name="lblLocation">Location</string>
+    <string name="lblBlank"></string>
 
 
     <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
@@ -212,7 +253,22 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+
+    <!-- Progress string -->
+    <string name="progress_downloading">Downloading…</string>
+    <string name="progress_uploading">Uploading…</string>
+    <string name="progress_auth">Signing In…</string>
+
+    <string name="upload_success">Upload finished</string>
+    <string name="upload_failure">Upload failed</string>\
+
+    <string name="download_success">Download finished</string>
+    <string name="download_failure">Download failure</string>
+    <!-- End Progress string -->
+
     <string name="title_activity_maps">Map</string>
+    <string name="toast_empty">File cannot be empty...</string>
+    <string name="title_activity_tambah_menu_makanan">TambahMenuMakanan</string>
 
 
 </resources>

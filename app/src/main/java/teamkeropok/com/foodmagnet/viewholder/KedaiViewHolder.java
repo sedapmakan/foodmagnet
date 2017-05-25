@@ -21,9 +21,11 @@ import teamkeropok.com.foodmagnet.model.Kedai;
 public class KedaiViewHolder extends RecyclerView.ViewHolder {
 
     public TextView tv_nama_kedai;
+    public TextView tv_alamat_kedai;
     public TextView tv_jenis_makanan;
     public TextView tv_waktu_operasi_buka;
     public TextView tv_waktu_operasi_tutup;
+    public TextView tv_julat_harga;
     public ImageView iv_ratingView;
     public TextView tv_ratingView;
 
@@ -32,9 +34,11 @@ public class KedaiViewHolder extends RecyclerView.ViewHolder {
     public KedaiViewHolder(View itemView) {
         super(itemView);
         tv_nama_kedai = (TextView) itemView.findViewById(R.id.tv_nama_kedai);
+        tv_alamat_kedai = (TextView) itemView.findViewById(R.id.tv_alamat_kedai);
         tv_jenis_makanan = (TextView) itemView.findViewById(R.id.tv_jenis_makanan);
         tv_waktu_operasi_buka = (TextView) itemView.findViewById(R.id.tv_waktu_operasi_buka);
         tv_waktu_operasi_tutup = (TextView) itemView.findViewById(R.id.tv_waktu_operasi_tutup);
+        tv_julat_harga = (TextView) itemView.findViewById(R.id.tv_julat_harga);
         iv_ratingView = (ImageView) itemView.findViewById(R.id.iv_rating);
         tv_ratingView = (TextView) itemView.findViewById(R.id.kedai_num_rating);
 
@@ -43,9 +47,11 @@ public class KedaiViewHolder extends RecyclerView.ViewHolder {
 
     public void bindToKedai(Kedai kedai, View.OnClickListener starClickListener) {
         tv_nama_kedai.setText(kedai.nama_kedai);
+        tv_alamat_kedai.setText(kedai.alamat);
         tv_jenis_makanan.setText(kedai.jenis_makanan);
         tv_waktu_operasi_buka.setText(kedai.waktu_operasi_buka);
         tv_waktu_operasi_tutup.setText(kedai.waktu_operasi_tutup);
+        tv_julat_harga.setText(kedai.julat_harga);
         // TODO: Gambar kedai kena bind sekali untuk prompt output kat menu utama
         tv_ratingView.setText(String.valueOf(kedai.ratingCount));
         iv_ratingView.setOnClickListener(starClickListener);

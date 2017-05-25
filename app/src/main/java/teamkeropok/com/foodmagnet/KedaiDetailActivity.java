@@ -61,6 +61,8 @@ public class KedaiDetailActivity extends BaseActivity implements View.OnClickLis
             throw new IllegalArgumentException("Must pass EXTRA_KEDAI_KEY");
         }
 
+
+
         // Initialize Database
         mKedaiReference = FirebaseDatabase.getInstance().getReference()
                 .child("Kedai").child(mKedaiKey);
@@ -180,6 +182,9 @@ public class KedaiDetailActivity extends BaseActivity implements View.OnClickLis
                     }
                 });
     }
+
+
+
 
 
     private static class CommentViewHolder extends RecyclerView.ViewHolder {

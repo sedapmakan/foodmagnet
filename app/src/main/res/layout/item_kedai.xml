@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    android:background="@android:drawable/screen_background_dark_transparent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/screen_background_light_transparent"
         android:padding="10dp">
 
         <include
@@ -45,13 +47,16 @@
 
         </LinearLayout>
 
-        <include layout="@layout/include_kedai_text"
+        <include
+            layout="@layout/include_kedai_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/kedai_layout"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            tools:mockup_opacity="@android:drawable/screen_background_light_transparent" />
 
 
     </RelativeLayout>

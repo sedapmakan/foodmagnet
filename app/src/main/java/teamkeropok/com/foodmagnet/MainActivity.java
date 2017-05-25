@@ -53,7 +53,7 @@ public class MainActivity extends BaseActivity {
             };
             private final String[] mFragmentNames = new String[] {
                     getString(R.string.tab_menu_utama),
-                    getString(R.string.tab_carian_kedai),
+                    getString(R.string.tab_kedai_sendiri),
                     getString(R.string.tab_promosi_kedai)
             };
             @Override
@@ -78,7 +78,7 @@ public class MainActivity extends BaseActivity {
 
 
         // Button launches NewKedai
-        findViewById(R.id.fab_new_post).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fab_new_kedai).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, TambahKedai.class));

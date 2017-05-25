@@ -3,10 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:drawable/screen_background_light_transparent"
+    android:backgroundTint="@android:drawable/screen_background_light_transparent"
     android:orientation="vertical">
 
 
     <!-- view adapter for menu utama-->
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tv_nama_kedai"
@@ -19,35 +25,114 @@
         tools:text="Nama Kedai" />
 
 
-    <TextView
-        android:id="@+id/tv_alamat_kedai"
+    <ImageView
+        android:id="@+id/imgView"
         android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:maxLines="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gambar_makanan_cheeseburger" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/table_main_view_kedai"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        tools:text="Alamat Kedai" />
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:padding="15dp">
 
-    <TextView
-        android:id="@+id/tv_jenis_makanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        tools:text="Jenis Makanan" />
-
-    <TextView
-        android:id="@+id/tv_waktu_operasi_buka"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="8" />
-
-    <TextView
-        android:id="@+id/tv_waktu_operasi_tutup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="12" />
-    
+        <TableRow>
 
 
+            <TextView
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="@string/str_alamat_kedai" />
+
+            <TextView
+                android:id="@+id/tv_alamat_kedai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="Alamat Kedai" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="@string/str_jenis_makanan" />
+
+            <TextView
+                android:id="@+id/tv_jenis_makanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="Jenis Makanan" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="@string/str_waktubuka_kedai" />
+
+            <TextView
+                android:id="@+id/tv_waktu_operasi_buka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8"
+
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="@string/str_waktututup_kedai" />
+
+            <TextView
+                android:id="@+id/tv_waktu_operasi_tutup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12"
+
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="@string/str_julat_kedai" />
+
+            <TextView
+                android:id="@+id/tv_julat_harga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RM 10 hingga RM 40"
+
+                android:textColor="@color/colorPrimaryDark" />
+        </TableRow>
+
+    </TableLayout>
 
 </LinearLayout>

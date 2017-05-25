@@ -1,190 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     tools:context="teamkeropok.com.foodmagnet.TambahKedai">
 
     <!-- our toolbar -->
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/content_text_kedai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize" />
+        android:layout_below="@id/tabs"
+        android:orientation="vertical"
+        android:weightSum="1">
 
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/table_tambah_kedai"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:layout_below="@id/toolbar">
-
-
-
-
-        <TextView
-            android:text="Tambah Kedai"
+        <TableLayout
+            android:id="@+id/table_tambah_kedai"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:padding="20dp"
+            android:layout_weight="0.57">
+
+            <TextView
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Tambah Kedai" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/ThemeOverlay.MyTextDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Nama Kedai" />
+
+
+                <EditText
+                    android:id="@+id/et_nama_kedai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textCapWords|textPersonName"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/ThemeOverlay.MyTextDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Alamat Kedai" />
+
+
+                <EditText
+                    android:id="@+id/et_alamat_kedai"
+                    style="@style/Widget.AppCompat.AutoCompleteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/ThemeOverlay.MyTextDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="No Telefon" />
+
+                <EditText
+                    android:id="@+id/et_no_telepon_kedai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/ThemeOverlay.MyTextDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Jenis Makanan" />
+
+                <Spinner
+                    android:id="@+id/spinnerJenisMakanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:dropDownWidth="wrap_content"
+                    android:entries="@array/JenisMakanan"
+                    android:visibility="visible" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/ThemeOverlay.MyTextDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Waktu Buka" />
+
+                <Spinner
+                    android:id="@+id/spinnerWaktuBuka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:entries="@array/WaktuOperasi"
+                    android:visibility="visible" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/ThemeOverlay.MyTextDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Waktu Tutup" />
+
+                <Spinner
+                    android:id="@+id/spinnerWaktuTutup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:entries="@array/WaktuOperasi"
+                    android:visibility="visible" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/ThemeOverlay.MyTextDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Bajet Makan" />
+
+                <Spinner
+                    android:id="@+id/spinnerJulatHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:dropDownWidth="wrap_content"
+                    android:entries="@array/BajetMakan"
+                    android:visibility="visible" />
+            </TableRow>
+
+
+        </TableLayout>
+
+
+        <Button
+            android:id="@+id/bt_tambah_kedai"
+            android:layout_width="100dp"
             android:layout_height="50dp"
-            style="@style/ThemeOverlay.MyTextDetail" />
+            android:layout_marginLeft="135dp"
+            android:layoutDirection="rtl"
+            android:text="Tambah Kedai" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:text="Nama Kedai"
-                style="@style/ThemeOverlay.MyTextDetail"/>
+    </LinearLayout>
 
 
-            <EditText
-                android:id="@+id/et_nama_kedai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textCapWords|textPersonName"
-                android:text="" />
-
-        </TableRow>
 
 
-        <TableRow>
 
-        <TextView
-            android:text="Alamat Kedai"
+    <LinearLayout
+        android:id="@+id/design_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:paddingLeft="85dp"
+        android:weightSum="1"
+        tools:clickable="?android:attr/windowTranslucentNavigation">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_refresh_kedai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            style="@style/ThemeOverlay.MyTextDetail" />
+            android:layout_margin="10dp"
+            android:src="@drawable/home"
+            android:visibility="visible"
+            app:elevation="3dp"
+            app:fabSize="mini" />
 
-
-            <EditText
-                android:id="@+id/et_alamat_kedai"
-                style="@style/Widget.AppCompat.AutoCompleteTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName" />
-        </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:text="No Telefon"
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_search_kedai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ThemeOverlay.MyTextDetail"
-            android:layout_column="1" />
+            android:layout_margin="10dp"
+            android:src="@drawable/search"
+            android:visibility="visible"
+            app:elevation="3dp"
+            app:fabSize="mini" />
 
-        <EditText
-            android:id="@+id/et_no_telepon_kedai"
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_new_kedai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberDecimal" />
-
-    </TableRow>
-
-
-
-
-    <TableRow>
-
-        <TextView
-            android:text="Jenis Makanan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/ThemeOverlay.MyTextDetail"
-            android:layout_column="1" />
-
-
-        <Spinner
-            android:id="@+id/spinnerJenisMakanan"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:dropDownWidth="wrap_content"
-            android:entries="@array/JenisMakanan"
-            android:visibility="visible" />
-
-    </TableRow>
-
-
-        <TableRow>
-
-            <TextView
-                android:text="Waktu Buka"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/ThemeOverlay.MyTextDetail"
-                android:layout_column="1" />
-
-            <Spinner
-                android:id="@+id/spinnerWaktuBuka"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="2"
-                android:entries="@array/WaktuOperasi"
-                android:visibility="visible" />
-
-        </TableRow>
-
-
-        <TableRow>
-            <TextView
-                android:text="Waktu Tutup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/ThemeOverlay.MyTextDetail"
-                android:layout_column="1" />
-
-
-        <Spinner
-            android:id="@+id/spinnerWaktuTutup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/WaktuOperasi"
-            android:layout_column="2"
-            android:visibility="visible" />
-
-        </TableRow>
-
-
-
-        <TableRow>
-
-            <TextView
-                android:text="Bajet Makan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/ThemeOverlay.MyTextDetail"
-                android:layout_column="1" />
-
-
-            <Spinner
-                android:id="@+id/spinnerJulatHarga"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:dropDownWidth="wrap_content"
-                android:entries="@array/BajetMakan"
-                android:visibility="visible" />
-
-        </TableRow>
-
-</TableLayout>
-
-    <Button
-        android:id="@+id/bt_tambah_kedai"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="Tambah Kedai"
-
-        android:layout_below="@+id/table_tambah_kedai"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="130dp" />
+            android:layout_margin="10dp"
+            android:src="@drawable/add"
+            android:visibility="visible"
+            app:elevation="3dp"
+            app:fabSize="mini" />
+    </LinearLayout>
 
 </RelativeLayout>

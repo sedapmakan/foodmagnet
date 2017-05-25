@@ -1,55 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/wood_background"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="teamkeropok.com.foodmagnet.KedaiDetailActivity">
+
 
     <include
         android:id="@+id/kedai_layout"
         layout="@layout/include_kedai_owner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
     <include
         android:id="@+id/kedai_text_layout"
         layout="@layout/include_kedai_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/kedai_layout"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="17dp" />
+
 
     <LinearLayout
         android:id="@+id/comment_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_below="@+id/kedai_text_layout"
         android:layout_marginTop="20dp"
+        android:orientation="horizontal"
         android:weightSum="1.0">
+
 
         <EditText
             android:id="@+id/field_comment_text"
             android:layout_width="0dp"
-            android:layout_weight="0.8"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:hint="Write a comment..."/>
+            android:layout_weight="0.8"
+            android:hint="Write a comment..."
+            android:maxLines="1" />
 
         <Button
             android:id="@+id/button_post_comment"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
-            android:layout_weight="0.2"
             android:layout_height="wrap_content"
-            android:text="Post"/>
+            android:layout_weight="0.2"
+            android:text="Post" />
 
     </LinearLayout>
 
@@ -59,5 +64,49 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/comment_form"
         tools:listitem="@layout/item_comment" />
+
+
+    <LinearLayout
+        android:id="@+id/design_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:paddingLeft="85dp"
+        android:weightSum="1"
+        tools:clickable="?android:attr/windowTranslucentNavigation">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_refresh_kedai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/home"
+            android:visibility="visible"
+            app:elevation="3dp"
+            app:fabSize="mini" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_search_kedai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/search"
+            android:visibility="visible"
+            app:elevation="3dp"
+            app:fabSize="mini" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_new_kedai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/add"
+            android:visibility="visible"
+            app:elevation="3dp"
+            app:fabSize="mini" />
+    </LinearLayout>
 
 </RelativeLayout>

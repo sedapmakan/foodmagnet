@@ -29,7 +29,6 @@ import java.util.ArrayList;
 import teamkeropok.com.foodmagnet.KedaiDetailActivity;
 import teamkeropok.com.foodmagnet.R;
 import teamkeropok.com.foodmagnet.model.Kedai;
-import teamkeropok.com.foodmagnet.fragment.CarianKedaiFragment;
 import teamkeropok.com.foodmagnet.viewholder.KedaiViewHolder;
 
 
@@ -87,8 +86,6 @@ public class CarianKedai extends ListKedaiFragment {
         return jenismakananQuery;
 
     }
-
-
 
 
 /*
